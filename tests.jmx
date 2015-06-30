@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.3" jmeter="2.8.20130705">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">10</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1433774619000</longProp>
+        <longProp name="ThreadGroup.end_time">1433774619000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+&quot;id&quot;: &quot;1234534625253&quot;,&#xd;
+&quot;imp&quot;: [ {&#xd;
+&quot;id&quot; : &quot;1&quot;,&#xd;
+&quot;banner&quot; : {&#xd;
+&quot;w&quot;: 300, &#xd;
+&quot;h&quot;: 250, &#xd;
+&quot;pos&quot;: 1, &#xd;
+&quot;topframe&quot;: 0,&#xd;
+&quot;mimes&quot;: [&quot;text/html&quot;, &quot;application/x-shockwave-flash&quot;],&#xd;
+&quot;ext&quot;: {&#xd;
+&quot;extra_sizes&quot;: [{&#xd;
+&quot;h&quot;:50,&#xd;
+&quot;w&quot;:300&#xd;
+}]&#xd;
+}&#xd;
+},&#xd;
+&quot;ext&quot;: {&#xd;
+&quot;rubicon&quot;: {&#xd;
+&quot;site_size_session_count&quot;: 5&#xd;
+},&#xd;
+&quot;viewability&quot;: 40&#xd;
+}&#xd;
+}],&#xd;
+&quot;site&quot;: {&#xd;
+&quot;id&quot;: &quot;234563&quot;,     &#xd;
+&quot;domain&quot;: &quot;siteabcd.com&quot;,&#xd;
+&quot;page&quot; : &quot;http://siteabcd.com/page.htm&quot;,&#xd;
+&quot;mobile&quot; : 1,&#xd;
+&quot;publisher&quot;: {&#xd;
+&quot;id&quot;: &quot;rubicon_25&quot;&#xd;
+}&#xd;
+},&#xd;
+&quot;device&quot;: {&#xd;
+&quot;os&quot;: &quot;android&quot;,&#xd;
+&quot;ip&quot;: &quot;64.124.253.1&quot;,&#xd;
+&quot;ifa&quot;:&quot;29c1570c-e577-4bc7-980f-1cd0b28be737&quot;,                   &#xd;
+&quot;geo&quot;: {&#xd;
+&quot;lat&quot;: 33.94940185546875,&#xd;
+&quot;lon&quot;: -116.97750091552734,&#xd;
+&quot;type&quot;: 1,&#xd;
+&quot;country&quot;: &quot;US&quot;,&#xd;
+&quot;region&quot;: &quot;NY&quot;,&#xd;
+&quot;city&quot;: &quot;White Plains&quot;,&#xd;
+&quot;zip&quot;: &quot;10601&quot;&#xd;
+},&#xd;
+&quot;ua&quot;: &quot;Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.16) Gecko/20110319 Firefox/3.6.16&quot;,&#xd;
+&quot;language&quot;: &quot;en&quot;&#xd;
+},&#xd;
+&quot;user&quot; : {&#xd;
+&quot;id&quot;: &quot;45asdf987656789adfad4678rew656789&quot;,&#xd;
+&quot;buyeruid&quot;: &quot;1234567890&quot;&#xd;
+},&#xd;
+&quot;wseat&quot;: [&quot;21&quot;,&quot;42&quot;,&quot;84&quot;],&#xd;
+&quot;cur&quot;: [&quot;USD&quot;, &quot;EUR&quot;, &quot;YEN&quot;],&#xd;
+&quot;tmax&quot;:100,&#xd;
+&quot;at&quot;: 2,&#xd;
+&quot;ext&quot;: {&#xd;
+&quot;ssp&quot;: &quot;rubicon&quot;,&#xd;
+&quot;adtruth&quot;: {&#xd;
+&quot;tdl_millis&quot;:19534993,&#xd;
+&quot;WEB_APP_BRIDGE_3_2&quot;:&quot;FD5314A665D2AF1C8FAA2D34FD87B97751E9C305&quot;,&#xd;
+&quot;WEB_APP_BRIDGE_4_0&quot;:&quot;4FD87B97751E9C305FD5314A665D2AF1C8FAA2D3&quot;&#xd;
+},&#xd;
+&quot;data&quot;: [{&#xd;
+&quot;name&quot;: &quot;domain-origin&quot;,&#xd;
+&quot;segment&quot;:[&#xd;
+{&quot;name&quot;:&quot;status&quot;,&quot;value&quot;:&quot;verified&quot;},&#xd;
+{&quot;name&quot;:&quot;domain&quot;,&quot;value&quot;:&quot;abcd.com&quot;}&#xd;
+]&#xd;
+}]&#xd;
+}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">130.211.68.22</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">bid/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

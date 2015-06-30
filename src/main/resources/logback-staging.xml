@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration debug="true">
+    <appender class="net.kencochrane.raven.logback.SentryAppender" name="Sentry">
+        <dsn>http://2957c230f76e4afa8a5a6a1d1a62088f:a5d4e3c02d2d485bbe502537ec5c4dda@sentry.databerries.com/6</dsn>
+        <tags>tag1:value1,tag2:value2</tags>
+        <!-- Optional, allows to select the ravenFactory -->
+        <!--<ravenFactory>net.kencochrane.raven.DefaultRavenFactory</ravenFactory>-->
+    </appender>
+    <root level="warn">
+        <appender-ref ref="Sentry"/>
+    </root>
+</configuration>
